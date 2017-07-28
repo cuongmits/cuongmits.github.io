@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	$('.progress').each(function() {
-		$('.progress-bar', this).animate({width: $('.progress-bar', this).attr('value') + '%'});
+		$('.progress-bar', this).animate({width: $('.progress-bar', this).attr('value') + '%'}, Math.random() * 20000);
 	});
 
 	$('.secret-content').click(function() {
@@ -13,10 +13,6 @@ $(document).ready(function(){
 
 	$('#header img').mousemove(function() {
 		var v = 'rotate(' + (Math.random() - 0.5) * 2 * 360 + 'deg)';
-		console.log(v);
-		//$(this).animate({-ms-transform: v});
-		//$(this).animate({-webkit-transform: v});
-		//$(this).animate({transform: v});
 		$(this).css('transform', v);
 	});
 });
