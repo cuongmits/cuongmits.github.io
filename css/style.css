@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Quicksand:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Quicksand:300,400,500,700|Butterfly+Kids');
 
 * {
 	max-width: 100% !important;
@@ -221,6 +221,11 @@ span.value {
 	.education-training .label {
 		width: 120px;
 	}
+}
+
+.signature {
+	font-family: 'Butterfly Kids', cursive;
+	font-size: 60px;
 }
 
 /* skype */
