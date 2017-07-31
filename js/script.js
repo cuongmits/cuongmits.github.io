@@ -4,6 +4,7 @@ $(document).ready(function(){
 
 	var onSuccess = function(location) {
 		var pri_email = 'cuongmits@gmail.com';
+		console.log(location.country.iso_code);
 		if (location.country.iso_code != 'DE' && location.country.iso_code != 'DEU' && location.country.iso_code != 'UA' && location.country.iso_code != 'UKR') {
 			$('#email').attr('data-content', pri_email);
 			$('#email span').attr('data-content', pri_email);
