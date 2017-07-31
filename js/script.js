@@ -10,7 +10,9 @@ $(document).ready(function(){
 			$('#email span').attr('data-content', pri_email);
 		}
 	};
-	var onError = function(error) {};
+	var onError = function(error) {
+		console.log(error);
+	};
 	geoip2.city(onSuccess, onError);
 
 	// progress bar
