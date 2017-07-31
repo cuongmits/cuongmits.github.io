@@ -12,6 +12,9 @@ $(document).ready(function(){
 				$('#email').attr('data-content', pri_email);
 				$('#email span').attr('data-content', pri_email);
 			}
+		},
+		error: function(e) {
+			console.log(e);
 		}
 	});
 
