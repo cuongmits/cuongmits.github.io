@@ -12,6 +12,7 @@
 	<link href="css/normalize.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 
+	<script type="text/javascript" src="https://js.maxmind.com/js/apis/geoip2/v2.1/geoip2.js"></script>
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -50,7 +51,7 @@
 				<li>
 					<span class="label">Email:</span>
 					<span class="value">
-						<a data-content="keon_nguyen@mackey.com.ua" class="send-email">
+						<a id="email" data-content="keon_nguyen@mackey.com.ua" class="send-email">
 							<span data-content="keon_nguyen@mackey.com.ua" class="secret-content">k..@mackey.com.ua</span>
 						</a>
 					</span>
@@ -114,13 +115,25 @@
 				</div>
 			</div>
 			<div class="skill">
+				<h2>Knockoutjs & Chartjs etc.</h2>
+				<div class="progress">
+					<div class="progress-bar" value="85"></div>
+				</div>
+			</div>
+			<div class="skill">
 				<h2>Zend Framework 2.x</h2>
 				<div class="progress">
-					<div class="progress-bar" value="75"></div>
+					<div class="progress-bar" value="80"></div>
 				</div>
 			</div>
 			<div class="skill">
 				<h2>Yii 2.0</h2>
+				<div class="progress">
+					<div class="progress-bar" value="70"></div>
+				</div>
+			</div>
+			<div class="skill">
+				<h2>Laravel 5.x</h2>
 				<div class="progress">
 					<div class="progress-bar" value="70"></div>
 				</div>
@@ -223,6 +236,12 @@
 			<h1>Others</h1>
 
 			<div class="skill">
+				<h2>Communicating</h2>
+				<div class="progress">
+					<div class="progress-bar" value="90"></div>
+				</div>
+			</div>
+			<div class="skill">
 				<h2>Diligent</h2>
 				<div class="progress">
 					<div class="progress-bar" value="95"></div>
@@ -305,12 +324,12 @@
 			<h1>Skills</h1>
 			<ul>
 				<li>Mathematical logic and Programming languages C/C++, Objective-C/Swift, Java, Assembly, PHP, Javascript, HTML5, CSS3</li>
-				<li>Experienced in OOP, GIT/SVN, Sphinx, jQuery/Ajax, NodeJS, Knockoutjs, Chartjs, Responsive Design, Web standard Schema.org</li>
+				<li>Experienced in OOP, GIT/SVN, Sphinx, jQuery/Ajax, NodeJS, Knockoutjs, Chartjs, Responsive Design, Web standard Schema.org etc.</li>
 				<li>Using OS: Linux (Ubuntu/CentOS), Mac OS, Windows</li>
 				<li>Developing both Web and Desktop/Mobile applications</li>
-				<li>Working with Opensource code and frameworks: OpenCV, Boost, Openbravo POS/ERP, Zend Framework 2.x, Yii 2.x, Laravel 5.x, Wordpress/WooCommerce</li>
-				<li>Experienced in MySQL, Persona, PostgreSql, MongoDB, MS SQL</li>
-				<li>Experienced in developing and managing long-term projects</li>
+				<li>Working with Opensource code and frameworks: OpenCV, Boost, Openbravo POS/ERP, Zend Framework 2.x, Yii 2.x, Laravel 5.x, Wordpress/WooCommerce, Joomla, Drupal etc.</li>
+				<li>Experienced in MySQL, Persona, PostgreSql, MongoDB, MS SQL. Also Experienced in DB & Query Optimization</li>
+				<li>Experienced in developing and managing long-term & big projects</li>
 				<li>Jira, UML, MS Projects, Kibana, Jenkins, BaseCamp, Testlink etc.</li>
 			</ul>
 		</div>
@@ -325,12 +344,12 @@
 			</div>
 			<div class="school">
 				<h2>Bachelor of Computer Science:</h2>
-				<p><span class="label">University I:</span><span class="value">Institute of technology, Vietnam National University-Hanoi (VNU)</span></p>
+				<p><span class="label">University #1:</span><span class="value">Institute of technology, Vietnam National University-Hanoi (VNU)</span></p>
 				<p><span class="label">Department:</span><span class="value">Information Technologies</span></p>
 				<p><span class="label">Date of admission:</span><span class="value">2002</span></p>
 				<p><span class="label">Date of graduation:</span><span class="value">/<br/>I got Vietnamese-Ukrainian Cultural Exchange Program scholarship to continue my study in Odessa National Polytechnic University, Ukraine</span></p>
 
-				<p><span class="label">University II:</span><span class="value">Odessa National Polytechnic University (ONPU), Ukraine</span></p>
+				<p><span class="label">University #2:</span><span class="value">Odessa National Polytechnic University (ONPU), Ukraine</span></p>
 				<p><span class="label">Department:</span><span class="value">Information Computer Systems (ICS)</span></p>
 				<p><span class="label">Date of admission:</span><span class="value">2004</span></p>
 				<p><span class="label">Date of graduation:</span><span class="value">2008</span></p>
@@ -359,7 +378,7 @@
 					<span class="value">
 						During this period, I created many websites for many people and organizations. One that I'm particularly
 						proud of is official news site of Vietnamese Businessmen Association in Odessa, Ukraine created from 2004,
-						its URL is <a target="_blank" href="http://nguoivietukraina.com/">www.nguoivietukraina.com</a>
+						its current URL is <a target="_blank" href="http://nguoivietukraina.com/">www.nguoivietukraina.com</a>
 					</span>
 				</p>
 			</div>
@@ -428,7 +447,7 @@
 			<div class="project-item">
 				<h2>Odessa Trading Pro 2007</h2>
 				<div class="project-description">
-					My first commercial programs about database management;
+					My first commercial programs about database management.
 				</div>
 				<div class="tech-used">
 					<div class="line"></div>
@@ -442,29 +461,29 @@
 				</div>
 				<div class="tech-used">
 					<div class="line"></div>
-					Technology used: PHP, Javascript/jQuery, Facebook/Google API, HTML, CSS, MySQL, Wordpress, Bootstrap;
+					Technology used: PHP, Javascript/jQuery, Facebook/Google API, HTML, CSS, MySQL, Wordpress, Bootstrap, responsive design etc.
 				</div>
 			</div>
 			<div class="project-item">
 				<h2>Interlect-Campus Project:</h2>
 				<div class="project-description">
 					A complete web solution for university remote study. It was developing in .Net (C#). System can
-					simulate nearly 100% the real activities of students and professors in university. Otherwise,
-					students using this system can do test, can give themselves goals they want then professors can
-					estimate it basing on ability of students etc.
+					simulate nearly 100% the real activities of students and professors in universitis. Otherwise,
+					students using this system can do tests, they also can give themselves goals they want to get and
+					then professors can	estimate it and give advices basing on ability of every students etc.
 				</div>
 				<div class="tech-used">
 					<div class="line"></div>
-					Technology used: .Net (C#), MS SQL Server, MS Visual Studio Team System, BaseCamp;
+					Technology used: .Net (C#), MS SQL Server, MS Visual Studio Team System, BaseCamp.
 				</div>
 			</div>
 			<div class="project-item">
 				<h2>Vietlogic-Openbravo Project:</h2>
 				<div class="project-description">
 					Responsibilities: Team Leader. I worked as a team-leader in a group of 5 peoples to localize
-					Openbravo into Vietnamese and develop it. Our goals were creating new reports depending on
-					requirement of customers for both POS and ERP. We wrote drivers for many hardwares as printer,
-					scale, data collector so openbravo- pos can work with and new functionalities for data collector.
+					Openbravo into Vietnamese and develop it to fit clients' requirements. Our goals were creating new reports
+					depending on requirement of customers for both POS and ERP applications. We wrote drivers and create
+					new functionalities for many hardwares such as printers, scales, data collectors etc. so openbravo-pos can work with.
 				</div>
 				<div class="tech-used">
 					<div class="line"></div>
@@ -478,12 +497,12 @@
 					Leapdrive and Terabox is cloud files management applications for both iOS and Android ordered
 					by Telefonica (one of the largest telecommunication company in the world). It's long term
 					projects that I have only one week to study Objective-C and to understand project structures
-					to work. I was an active player	joining these projects to develop, fix bugs and optimize the
+					to start coding. I was an active player joining these projects to develop, fix bugs and optimize the
 					code.
 				</div>
 				<div class="tech-used">
 					<div class="line"></div>
-					Technologies used: Objective C, Java, Xcode, Esclipse, Jira, SVN.
+					Technologies used: Objective-C, Java, Xcode, Esclipse, Jira, SVN.
 				</div>
 			</div>
 			<div class="project-item">
@@ -532,7 +551,7 @@
 						<li>
 							<a target="_blank" href="http://textbookx.com/">www.textbookx.com</a> - bookstore framework
 							for US universities of Akademos	company <a target="_blank" href="http://akademos.com/">www.akademos.com</a>,
-							where I’m key developer, who create backend	part (also some frontend part), which was high-load
+							where I’m key developer, who create almost backend part (also some frontend part), which was high-load
 							with very complicated SQL queries that I’ve optimized them to have a very high performance.
 						</li>
 						<li>etc.</li>
@@ -540,7 +559,7 @@
 				</div>
 				<div class="tech-used">
 					<div class="line"></div>
-					Used technologies: Zend Framework, Wordpress, js/ajax, json, soap, server api, Google Map API,
+					Used technologies: Zend Framework, Wordpress, js/ajax, json, rest, soap, server api, Google Map API,
 					Google Drive API, Facebook API, Woocommerce, Wooticket. Responsive theme, Foundation theme.
 				</div>
 			</div>
@@ -552,19 +571,19 @@
 				</div>
 				<div class="tech-used">
 					<div class="line"></div>
-					Technologies used: Zend Framework 2.x, Doctrine, mySQL, JS/Ajax/jQuery, Bootstrap etc.
+					Technologies used: Zend Framework 2.x, Doctrine, mySQL, JS/Ajax/jQuery and some other js libraries, Bootstrap etc.
 				</div>
 			</div>
 			<div class="project-item">
 				<h2>Project Management System:</h2>
 				<div class="project-description">
 					Solution for projects management including project's status, people who	join in, their information
-					and roles in each project. Using DBMS: MySQL, Yii Migration, Data Transaction, JSON.
+					and roles in each project. Using DBMS: MySQL, Yii, Migration, Data Transaction, JSON.
 					Github: <a target="_blank" href="https://github.com/cuongmits/Project-Management-System">https://github.com/cuongmits/Project-Management-System</a>.
 				</div>
 				<div class="tech-used">
 					<div class="line"></div>
-					Technologies used: Yii2.0.9 with Gii	extension, Active Form, Active Record, Ajax.
+					Technologies used: Yii 2.x with Gii extension, Active Form, Active Record, Ajax.
 				</div>
 			</div>
 			<div class="project-item">
