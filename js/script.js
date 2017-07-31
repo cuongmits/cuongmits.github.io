@@ -2,18 +2,18 @@ $(document).ready(function(){
 
 	// location
 
-	var onSuccess = function(location) {
-		var pri_email = 'cuongmits@gmail.com';
-		console.log(location.country.iso_code);
-		if (location.country.iso_code != 'DE' && location.country.iso_code != 'DEU' && location.country.iso_code != 'UA' && location.country.iso_code != 'UKR') {
-			$('#email').attr('data-content', pri_email);
-			$('#email span').attr('data-content', pri_email);
+	jQuery.ajax({
+		url: 'http://freegeoip.net/json/',
+		type: 'POST',
+		dataType: 'jsonp',
+		success: function(location) {
+			pri_email = 'cuongmits@gmail.com';
+			if (location.country_code != 'UA' && location.country_code != 'DE') {
+				$('#email').attr('data-content', pri_email);
+				$('#email span').attr('data-content', pri_email);
+			}
 		}
-	};
-	var onError = function(error) {
-		console.log(error);
-	};
-	geoip2.city(onSuccess, onError);
+	});
 
 	// progress bar
 
