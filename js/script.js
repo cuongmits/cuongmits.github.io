@@ -38,9 +38,17 @@ $(document).ready(function(){
 
 	// avatar rotating
 
-	$('#header img').mousemove(function() {
+	function rotate_avatar() {
 		var v = 'rotate(' + (Math.random() - 0.5) * 2 * 360 + 'deg)';
-		$(this).css('transform', v);
+		$('#header img').css('transform', v);
+	}
+
+	$('#header img').mousemove(function() {
+		rotate_avatar();
 	});
+
+	setInterval(function(){
+		rotate_avatar();
+	}, 30000);
 
 });
