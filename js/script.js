@@ -38,17 +38,43 @@ $(document).ready(function(){
 
 	// avatar rotating
 
-	function rotate_avatar() {
-		var v = 'rotate(' + (Math.random() - 0.5) * 2 * 360 + 'deg)';
-		$('#header img').css('transform', v);
+	function getRotationDegree(o) {
+		var matrix = o.css("-webkit-transform")
+			|| o.css("-moz-transform")
+			|| o.css("-ms-transform")
+			|| o.css("-o-transform")
+			|| o.css("transform");
+		if(matrix !== 'none') {
+			var values = matrix.split('(')[1].split(')')[0].split(',');
+			var a = values[0];
+			var b = values[1];
+			var angle = Math.round(Math.atan2(b, a) * (180 / Math.PI));
+		} else {
+			var angle = 0;
+		}
+		return (angle < 0) ? angle + 360 : angle;
 	}
 
+	$.fn.animateRotate = function(angle, duration, easing, complete) {
+		var args = $.speed(duration, easing, complete);
+		var step = args.step;
+		return this.each(function(i, e) {
+			args.step = function(now) {
+				$.style(e, 'transform', 'rotate(' + now + 'deg)');
+				if (step) return step.apply(this, arguments);
+			};
+			$({deg: getRotationDegree($('#header img'))}).animate({deg: angle}, args);
+		});
+	};
+
 	$('#header img').mousemove(function() {
-		rotate_avatar();
+		var v = 'rotate(' + (Math.random() - 0.5) * 2 * 360 + 'deg)';
+		$('#header img').css('transform', v);
 	});
 
 	setInterval(function(){
-		rotate_avatar();
+		var v = (1 + Math.random()) * 2000;
+		$('#header img').animateRotate(v, 1000);
 	}, 30000);
 
 });
