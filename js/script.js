@@ -73,8 +73,8 @@ $(document).ready(function(){
 	});
 
 	setInterval(function(){
-		var v = (1 + Math.random()) * 2000;
+		var v = (1 + Math.random()) * 1000;
 		$('#header img').animateRotate(v, 1000);
-	}, 30000);
+	}, 60000);
 
 });
