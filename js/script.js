@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 	// location
 
-	jQuery.ajax({
+	$.ajax({
 		url: 'https://freegeoip.net/json/',
 		type: 'POST',
 		dataType: 'jsonp',
@@ -68,13 +68,11 @@ $(document).ready(function(){
 	};
 
 	$('#header img').mousemove(function() {
-		var v = 'rotate(' + (Math.random() - 0.5) * 2 * 360 + 'deg)';
-		$('#header img').css('transform', v);
+		$('#header img').css('transform', 'rotate(' + (Math.random() - 0.5) * 2 * 360 + 'deg)');
 	});
 
 	setInterval(function(){
-		var v = (1 + Math.random()) * 1000;
-		$('#header img').animateRotate(v, 1000);
+		$('#header img').animateRotate((1 + Math.random()) * 1000, 1000);
 	}, 60000);
 
 });
