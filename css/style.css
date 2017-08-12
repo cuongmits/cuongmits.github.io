@@ -45,6 +45,7 @@ span.value {
 	flex-shrink: 0;
 	background-color: #42536f;
 	color: white;
+	padding-bottom: 40px;
 }
 
 #left-wrapper #header {
