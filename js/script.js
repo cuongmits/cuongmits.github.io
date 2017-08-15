@@ -21,7 +21,7 @@ $(document).ready(function(){
 	// progress bar
 
 	$('.progress').each(function() {
-		$('.progress-bar', this).animate({width: $('.progress-bar', this).attr('value') + '%'}, Math.random() * 20000);
+		$('.progress-bar', this).animate({width: $('.progress-bar', this).attr('data-value') + '%'}, Math.random() * 20000);
 	});
 
 	// secret content

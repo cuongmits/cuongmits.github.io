@@ -60,13 +60,6 @@ span.value {
 	border: 5px solid #eee;
 }
 
-/*
-#left-wrapper #header img:hover {
-	-ms-transform: rotate(180deg);
-	-webkit-transform: rotate(180deg);
-	transform: rotate(180deg);
-}*/
-
 #left-wrapper #header p {
 	font-family: 'Indie Flower', cursive !important;
 }
@@ -171,10 +164,6 @@ span.value {
 	flex: 1;
 }
 
-.and-more {
-	padding-bottom: 60px !important;
-}
-
 .line {
 	width: 100px;
 	border-bottom: 1px solid #d7d7d7;
@@ -183,6 +172,18 @@ span.value {
 
 .tech-used {
 	font-size: 12px;
+}
+
+.and-more {
+	border-bottom: none !important;
+}
+
+.validator {
+	text-align: right;
+}
+
+.validator:hover {
+	background-color: white !important;
 }
 
 @media all and (max-width: 1020px) {
@@ -214,8 +215,6 @@ span.value {
 
 	.left-block ul li {
 		display:inline-block;
-		*display:inline; /*IE7*/
-		*zoom:1; /*IE7*/
 		min-width: 260px;
 		float: none;
 	}
