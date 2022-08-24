@@ -186,6 +186,12 @@ span.value {
 	background-color: white !important;
 }
 
+.project-item > .project-logo, .project-item > svg {
+	max-width: 120px !important;
+	max-height: 30px !important;
+	float: right;
+}
+
 @media all and (max-width: 1020px) {
 	#wrapper {
 		margin: 0 auto;
