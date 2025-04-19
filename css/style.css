@@ -118,6 +118,21 @@ span.value {
 }
 
 /*** right-wrapper ***/
+.top-link {
+	position: relative;
+}
+
+.top-link a {
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-weight: bold;
+	font-size: 14px;
+	background-color: #394968;
+	color: white;
+	padding: 5px 10px;
+}
+
 #right-wrapper {
 	-webkit-flex: 1;
 	flex: 1;
